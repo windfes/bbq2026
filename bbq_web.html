@@ -2088,35 +2088,103 @@ body {
     </div>
   </div>
 </div>
+<div class="card" id="card-飯野 成路" onclick="closeModal()">
+  <div class="card-inner" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeModal()">✕</button>
+    <div class="card-left">
+      <div class="group-tag" id="modal-group-tag"></div>
+      <div class="card-name">飯野 成路</div>
+      <div class="card-meta">〇〇歳　〇〇業</div>
+      <span class="mbadge" style="background:#D4A017;color:#fff;border:none">💎 Special Supporter</span>
+    </div>
+    <div class="card-right">
+      <div class="card-row">
+        <div class="card-row-icon">♥</div>
+        <div>
+          <div class="card-row-label">日野の好きなポイント</div>
+          <div class="card-row-text">ダミーテキスト</div>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="card-row-icon">⚡</div>
+        <div>
+          <div class="card-row-label">今チャレンジしていること</div>
+          <div class="card-row-text">ダミーテキスト</div>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="card-row-icon">★</div>
+        <div>
+          <div class="card-row-label">自己PR</div>
+          <div class="card-row-text pr-text">ダミーテキスト</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
+<div class="card" id="card-本橋 文平" onclick="closeModal()">
+  <div class="card-inner" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeModal()">✕</button>
+    <div class="card-left">
+      <div class="group-tag" id="modal-group-tag"></div>
+      <div class="card-name">本橋 文平</div>
+      <div class="card-meta">〇〇歳　〇〇業</div>
+      <span class="mbadge" style="background:#D4A017;color:#fff;border:none">💎 Special Supporter</span>
+    </div>
+    <div class="card-right">
+      <div class="card-row">
+        <div class="card-row-icon">♥</div>
+        <div>
+          <div class="card-row-label">日野の好きなポイント</div>
+          <div class="card-row-text">ダミーテキスト</div>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="card-row-icon">⚡</div>
+        <div>
+          <div class="card-row-label">今チャレンジしていること</div>
+          <div class="card-row-text">ダミーテキスト</div>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="card-row-icon">★</div>
+        <div>
+          <div class="card-row-label">自己PR</div>
+          <div class="card-row-text pr-text">ダミーテキスト</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+ 
 <script>
 let current = null;
-
+ 
 function openCard(id, gname) {
   if (current) current.style.display = 'none';
   const el = document.getElementById('card-' + id);
   if (!el) return;
   el.style.display = 'block';
   current = el;
-
-  const colors = {'1班':'#8B5E2A','2班':'#1A5276','3班':'#1D6A2A'};
+ 
+  const colors = {'1班':'#8B5E2A','2班':'#1A5276','3班':'#1D6A2A','Special Supporter':'#D4A017'};
   const tag = el.querySelector('#modal-group-tag');
   if (tag) {
     tag.textContent = gname;
     tag.style.borderColor = colors[gname] || '#fff';
   }
-
+ 
   document.getElementById('modal').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
-
+ 
 function closeModal() {
   document.getElementById('modal').classList.remove('open');
   document.body.style.overflow = '';
   if (current) { current.style.display = 'none'; current = null; }
 }
-
+ 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 // 初期状態: 全カード非表示

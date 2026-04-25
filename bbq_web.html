@@ -2122,6 +2122,24 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
 // 初期状態: 全カード非表示
 document.querySelectorAll('#modal .card').forEach(c => c.style.display = 'none');
 </script>
+ 
+<div class="main-wrap" style="padding-top:0">
+  <section class="group-section" style="--gc:#FFFBEA;--gd:#D4A017">
+    <div class="group-header">
+      <span class="group-emoji">💎</span>
+      <span class="group-title">Special Supporter</span>
+    </div>
+    <div class="member-grid">
+      <button class="member-btn" style="--gc:#FFFBEA;--gd:#D4A017;flex-direction:row;align-items:center;gap:12px" onclick="openCard('飯野 成路','Special Supporter')">
+        <span class="m-name">飯野 成路</span><span class="m-sub">〇〇歳　〇〇業</span>
+      </button>
+      <button class="member-btn" style="--gc:#FFFBEA;--gd:#D4A017;flex-direction:row;align-items:center;gap:12px" onclick="openCard('本橋 文平','Special Supporter')">
+        <span class="m-name">本橋 文平</span><span class="m-sub">〇〇歳　〇〇業</span>
+      </button>
+    </div>
+  </section>
+</div>
+ 
 <div style="background:#1a1a1a;color:#888;text-align:center;padding:20px 16px;font-size:12px;font-family:'Noto Sans JP',sans-serif;letter-spacing:0.08em;line-height:1.8;">
   ⚠️ このページは本日の事業終了後に削除されます。<br>参加者以外への共有はご遠慮ください。
 </div>
